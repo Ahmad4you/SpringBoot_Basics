@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlrewrite>
+	<rule>
+		<from>^/login$</from>
+		<to>/login.xhtml</to>
+	</rule>
+	<rule>
+		<from>^/admin/home$</from>
+		<to>/admin/home.xhtml</to>
+	</rule>
+	<rule>
+		<from>^/somePage$</from>
+		<to>/somePage.xhtml</to>
+	</rule>
+	<!-- Weitere Regeln für andere Seiten hinzufügen -->
+</urlrewrite>

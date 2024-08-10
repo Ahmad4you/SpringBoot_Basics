@@ -1,0 +1,67 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+}
+
+h:form {
+    margin: 20px;
+}
+
+.ui-datatable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ui-datatable thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.ui-datatable th, .ui-datatable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.ui-datatable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.ui-datatable th {
+    font-weight: bold;
+}
+
+.ui-datatable td {
+    font-size: 14px;
+}
+
+.ui-outputtext {
+    font-size: 16px;
+    color: #555;
+}
+
+.ui-commandbutton {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+.ui-commandbutton:hover {
+    background-color: #0056b3;
+}
