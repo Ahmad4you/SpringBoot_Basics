@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Produkt bearbeiten</title>
+</head>
+<body>
+    <h1>Produkt bearbeiten</h1>
+    <form th:action="@{/products/edit/{id}(id=${product.id})}" th:object="${product}" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" />
+        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+    </div>
+    <div>
+        <label>Preis:</label>
+        <input type="number" th:field="*{price}" />
+        <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></p>
+    </div>
+    <div>
+        <label>Bild:</label>
+        <input type="file" name="file"/>
+    </div>
+    <button type="submit">Produkt aktualisieren</button>
+</form>
+    <a th:href="@{/products}">Zurück zur Produktliste</a>
+</body>
+</html>
