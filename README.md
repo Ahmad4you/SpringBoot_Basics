@@ -19,7 +19,7 @@ cd SpringBoot_Basics
 
 Jedes Projekt befindet sich in einem eigenen Unterverzeichnis. Navigiere in das gewünschte Projektverzeichnis, um den Code zu erkunden und die Anwendung auszuführen.
 
-##Voraussetzungen
+### Voraussetzungen
 -Java 17+: Stelle sicher, dass Java 17 oder eine neuere Version auf deinem Rechner installiert ist.
 -Maven: Jedes Projekt wird mit Maven verwaltet. Stelle sicher, dass Maven installiert und konfiguriert ist.
 -Spring Boot: Alle Projekte nutzen Spring Boot, mit Abhängigkeiten, die durch Maven verwaltet werden.
