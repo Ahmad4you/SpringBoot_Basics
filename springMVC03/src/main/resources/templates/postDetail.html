@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${post.title}">Beitrag Detail</title>
+    <link rel="stylesheet" th:href="@{/css/postDetail.css}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="post-title" th:text="${post.title}"></h1>
+        <p class="post-content" th:text="${post.content}"></p>
+
+        <div class="comment-section">
+            <h2>Kommentare</h2>
+            <ul>
+                <li th:each="comment : ${post.comments}" class="comment">
+                    <p th:text="${comment.content}"></p>
+                    <a th:href="@{/comments/delete/{id}(id=${comment.id}, postId=${post.id})}">Kommentar löschen</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="comment-form">
+            <h3>Neuen Kommentar hinzufügen</h3>
+            <form th:action="@{/comments/add}" th:object="${post}" method="post">
+                <input type="hidden" name="postId" th:value="${post.id}" />
+                <textarea name="content"></textarea>
+                <button type="submit">Kommentar hinzufügen</button>
+            </form>
+        </div>
+
+        <div class="post-actions">
+            <a th:href="@{/posts/edit/{id}(id=${post.id})}">Beitrag bearbeiten</a>
+            <a th:href="@{/posts/delete/{id}(id=${post.id})}">Beitrag löschen</a>
+            <a th:href="@{/posts}">Zurück zur Liste</a>
+        </div>
+    </div>
+</body>
+</html>

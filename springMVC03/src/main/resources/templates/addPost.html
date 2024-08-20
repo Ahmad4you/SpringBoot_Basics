@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Neuen Beitrag hinzufügen</title>
+    <link rel="stylesheet" th:href="@{/css/addPost.css}">
+</head>
+<body>
+    <h1>Neuen Beitrag hinzufügen</h1>
+    <form th:action="@{/posts/add}" th:object="${post}" method="post">
+        <label for="title">Titel:</label>
+        <input type="text" id="title" name="title" th:field="*{title}" />
+
+        <label for="content">Inhalt:</label>
+        <textarea id="content" name="content" th:field="*{content}"></textarea>
+
+        <button type="submit">Beitrag hinzufügen</button>
+    </form>
+
+    <a th:href="@{/posts}">Zurück zur Liste</a>
+</body>
+</html>
