@@ -14,8 +14,10 @@ Willkommen im Sammlung von Spring Boot Projekten-Repository!
 
 ## Erste Schritte
 Um mit einem der Projekte in diesem Repository zu beginnen, klone das Repository einfach und navigiere in das gewünschte Projektverzeichnis.
+```
 git clone https://github.com/Ahmad4you/SpringBoot_Basics.git
 cd SpringBoot_Basics
+```
 
 Jedes Projekt befindet sich in einem eigenen Unterverzeichnis. Navigiere in das gewünschte Projektverzeichnis, um den Code zu erkunden und die Anwendung auszuführen.
 
