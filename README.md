@@ -1,7 +1,7 @@
-#Sammlung von Spring Boot Projekten
+# Sammlung von Spring Boot Projekten
 Willkommen im Sammlung von Spring Boot Projekten-Repository!
 
-##Projektliste
+## Projektliste
 1: RESTful Web Service
 2: Spring Data JPA Beispiel
 3: Spring Boot MVC
@@ -12,7 +12,7 @@ Willkommen im Sammlung von Spring Boot Projekten-Repository!
 8: CommandLineRunner Beispiel
 9: Spring Boot Fehlerbehandlung
 
-##Erste Schritte
+## Erste Schritte
 Um mit einem der Projekte in diesem Repository zu beginnen, klone das Repository einfach und navigiere in das gewünschte Projektverzeichnis.
 git clone https://github.com/Ahmad4you/SpringBoot_Basics.git
 cd SpringBoot_Basics
