@@ -37,7 +37,7 @@ public class BootActuatorApplication {
 	@Autowired
 	MeterRegistry meterRegistry;
 	
-	@RequestMapping("/") // Mappt die Root-URL / auf die Methode index().
+	@RequestMapping("/") // Mappt die Root-URL / auf die Methode index()...
 	public String index() {
         Counter counter = meterRegistry.counter("counter.index.invoked");
         counter.increment(); // Erhöht den Zähler, wenn der Endpoint aufgerufen wird.
