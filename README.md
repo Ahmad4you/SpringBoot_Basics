@@ -3,13 +3,13 @@ Willkommen im Sammlung von Spring Boot Projekten-Repository!
 
 ## Projektliste
 1: RESTful Web Service
-2: Spring Data JPA Beispiel
+2: Spring Data JPA
 3: Spring Boot MVC
 4: Thymeleaf-Integration
 5: Spring Boot mit H2-Datenbank
-6: Datei-Upload Beispiel
+6: Datei-Upload
 7: Aufgabenplanung
-8: CommandLineRunner Beispiel
+8: CommandLineRunner
 9: Spring Boot Fehlerbehandlung
 
 ## Erste Schritte
