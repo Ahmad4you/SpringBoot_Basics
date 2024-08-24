@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <h:head>
+        <title>REST Customer Management</title>
+    </h:head>
+    <h:body>
+        <h:form id="restCustomerForm">
+            <!-- Kundenliste aus der REST-API -->
+            <p:dataTable var="customer" value="#{restCustomerBean.customers}" selectionMode="single"
+                         selection="#{restCustomerBean.selectedCustomer}" rowKey="#{customer.id}" paginator="true" rows="10">
+                <p:ajax event="rowSelect" listener="#{restCustomerBean.onCustomerSelect}" update=":restCustomerForm:orderPanel @form" />
+                <p:column headerText="ID">
+                    <h:outputText value="#{customer.id}" />
+                </p:column>
+                <p:column headerText="Name">
+                    <h:outputText value="#{customer.name}" />
+                </p:column>
+            </p:dataTable>
+
+            <!-- Bestellungstabelle für den ausgewählten Kunden -->
+            <h:panelGrid id="orderPanel" columns="2" rendered="#{not empty restCustomerBean.orders}">
+                <h:outputText value="Orders:" />
+                <p:dataTable var="order" value="#{restCustomerBean.orders}" paginator="true" rows="10">
+                    <p:column headerText="Product">
+                        <h:outputText value="#{order.product}" />
+                    </p:column>
+                    <p:column headerText="Quantity">
+                        <h:outputText value="#{order.quantity}" />
+                    </p:column>
+                </p:dataTable>
+            </h:panelGrid>
+
+            <!-- Hinzufügen eines neuen Kunden -->
+            <h:panelGrid columns="2">
+                <h:outputLabel value="New Customer Name:" />
+                <h:inputText value="#{restCustomerBean.newCustomer.name}" />
+                <h:commandButton value="Add Customer" action="#{restCustomerBean.addCustomer}" update="@form" />
+            </h:panelGrid>
+
+            <!-- Hinzufügen einer neuen Bestellung für den ausgewählten Kunden -->
+            <h:panelGrid columns="2" rendered="#{not empty restCustomerBean.selectedCustomer}">
+                <h:outputLabel value="New Order Product:" />
+                <h:inputText value="#{restCustomerBean.newOrder.product}" />
+                
+                <h:outputLabel value="Quantity:" />
+                <h:inputText value="#{restCustomerBean.newOrder.quantity}" />
+
+                <h:commandButton value="Add Order" action="#{restCustomerBean.addOrderToCustomer}" update="@form :restCustomerForm:orderPanel" />
+            </h:panelGrid>
+
+        </h:form>
+    </h:body>
+</f:view>
+</html>
